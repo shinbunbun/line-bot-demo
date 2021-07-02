@@ -1,8 +1,15 @@
 # line-bot-demo
+[serverless framework](https://www.serverless.com/)を使ってAWSLambdaでLINEBotを構築するサンプルリポジトリです。
+
+## 事前準備
+AWSアカウントを作成し、コマンドラインで使用できるクレデンシャルを発行する
+
+## LINEBotを作成する
+[こちら](https://developers.line.biz/ja/)でBotアカウントを作成します。
+チャンネルアクセストークンを取得しておきます。
+挨拶メッセージや自動応答をオフにしておきます。
 
 ## デプロイ方法
-
-※事前にAWSアカウントを作成し、コマンドラインで使用できるクレデンシャルを発行している必要があります。
 
 - 検証環境
   - macOS Catalina 10.15.7
@@ -39,3 +46,7 @@ awsへデプロイ
 ```terminal
 npx sls deploy 
 ```
+
+## 動作確認をする
+デプロイした後、ターミナルに表示されたURLをLINEBotのWebhookURLに登録します。
+LINE友達になって、「おはよう」と送信した時に返事があれば成功です。
